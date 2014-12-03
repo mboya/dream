@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ($_SESSION['']) {
+	header("location: dashboard.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -6,7 +13,7 @@
 	</head>
 
 	<body style = "background-color: #f1f2f6">
-		<form style="margin-top:30%" action="" method="">
+		<form style="margin-top:30%" action="dashboard.php" method="post">
 			<div class = "col-md-6">
 				<input type="text" class="form-control" placeholder="UserName">
 			</div>
@@ -14,7 +21,7 @@
 				<input type="password" class="form-control" placeholder="Password">
 			</div>
 			<div style="margin-top:5%" class="col-md-3">
-            	<button type="button" class="btn btn-info btn-block">Login</button>
+            	<button type="submit" class="btn btn-info btn-block">Login</button>
           	</div>
 		</form>
 	</body>
